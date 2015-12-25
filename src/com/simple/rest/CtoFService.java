@@ -6,7 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 @Path("/ctofservice")
-public class CtoFService {
+public class CtoFService{
 
 	@GET
 	@Produces("application/xml")

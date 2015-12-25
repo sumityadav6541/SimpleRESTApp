@@ -14,7 +14,7 @@ public class SimpleRESTClient {
 	public static void main(String[] args) {
 
 		try{
-			URL url = new URL("http://localhost:8080/SimpleRESTApp/rest/ftocservice");
+			URL url = new URL("http://localhost:8080/SimpleRESTApp/rest/ftocservice/10");
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
