@@ -85,7 +85,7 @@ public class FtoCService {
 	  }
 	  
 	  @PUT
-	  @Produces("application/json")
+	  @Produces("application/json")// this is a PUT method example
 	  public Response convertFtoCPUT() throws JSONException {
  
 		JSONObject jsonObject = new JSONObject();
