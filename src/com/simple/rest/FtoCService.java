@@ -51,7 +51,6 @@ public class FtoCService {
 	  
 	  @POST
 	  @Path("/post")
-	  @Consumes("application/json")
 	  @Produces(MediaType.APPLICATION_JSON)
 	  public Response convertFtoCPOST(){
 		  JSONObject jsonObject = new JSONObject();
@@ -69,7 +68,6 @@ public class FtoCService {
 	  
 	  @Path("/post/{f}")
 	  @POST
-	  @Consumes("application/json")
 	  @Produces(MediaType.APPLICATION_JSON)
 	  public Response convertFtoCfromInputPOST(@PathParam("f") float f) throws JSONException {
  
