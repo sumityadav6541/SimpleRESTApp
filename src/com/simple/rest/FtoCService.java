@@ -1,6 +1,7 @@
 package com.simple.rest;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -97,5 +98,54 @@ public class FtoCService {
 		//String result = "@Produces(\"application/json\") Output: \n\nF to C Converter Output: \n\n" + jsonObject;
 		String result = jsonObject.toString();
 		return Response.status(200).entity(result).build();
+	  }
+	  
+	  @Path("/{f}")
+	  @PUT
+	  @Produces(MediaType.APPLICATION_JSON)
+	  public Response convertFtoCfromInputPUT(@PathParam("f") float f) throws JSONException {
+ 
+		JSONObject jsonObject = new JSONObject();
+		float celsius;
+		celsius =  (f - 32)*5/9; 
+		jsonObject.put("Method Type", "POST");
+		jsonObject.put("F Value", f); 
+		jsonObject.put("C Value", celsius);
+		
+		//String result = "@Produces(\"application/json\") Output: \n\nF to C Converter Output: \n\n" + jsonObject;
+		return Response.status(200).entity(jsonObject.toString()).build();
+	  }
+	  
+	  @DELETE
+	  @Produces("application/json")// this is a PUT method example
+	  public Response convertFtoCDEL() throws JSONException {
+ 
+		JSONObject jsonObject = new JSONObject();
+		Double fahrenheit = 98.24;
+		Double celsius;
+		celsius = (fahrenheit - 32)*5/9; 
+		jsonObject.put("Method Type", "DELETE");
+		jsonObject.put("F Value", fahrenheit); 
+		jsonObject.put("C Value", celsius);
+ 
+		//String result = "@Produces(\"application/json\") Output: \n\nF to C Converter Output: \n\n" + jsonObject;
+		String result = jsonObject.toString();
+		return Response.status(200).entity(result).build();
+	  }
+	  
+	  @Path("/{f}")
+	  @DELETE
+	  @Produces(MediaType.APPLICATION_JSON)
+	  public Response convertFtoCfromInputDEL(@PathParam("f") float f) throws JSONException {
+ 
+		JSONObject jsonObject = new JSONObject();
+		float celsius;
+		celsius =  (f - 32)*5/9; 
+		jsonObject.put("Method Type", "DELETE");
+		jsonObject.put("F Value", f); 
+		jsonObject.put("C Value", celsius);
+		
+		//String result = "@Produces(\"application/json\") Output: \n\nF to C Converter Output: \n\n" + jsonObject;
+		return Response.status(200).entity(jsonObject.toString()).build();
 	  }
 }
