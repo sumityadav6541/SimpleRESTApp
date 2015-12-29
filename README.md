@@ -10,3 +10,5 @@
 8. http://<server-host>:<server-port>/SimpleRESTApp/rest/ftocservice/post/22.3	(Method Type:POST)
 9. http://<server-host>:<server-port>/SimpleRESTApp/rest/ftocservice      		(Method Type:DELETE)
 10. http://<server-host>:<server-port>/SimpleRESTApp/rest/ftocservice/98      	(Method Type:DELETE)
+
+##Adding Authentication in the App
